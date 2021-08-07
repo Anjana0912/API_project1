@@ -29,3 +29,15 @@
 //To get all the publications
 //To get a specific publication //task DONE
 //To get a list of publications based on a book//task DONE
+
+//POST REQUEST
+//add new books
+//add new publication
+//add new author
+
+//PUT REQUEST
+//update book details if author is changed -done
+//DELETE
+//1. delete a book
+//2. delete author from book
+//3.delete author from book and related book

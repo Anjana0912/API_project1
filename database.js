@@ -28,7 +28,8 @@ const publication = [
     id: 1,
     name: "writex",
     books: ["12345Book"]
-  }
+  } 
+
 ]
 
 module.exports = {books , author , publication};
