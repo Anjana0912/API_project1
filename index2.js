@@ -1,4 +1,9 @@
+require ("dotenv").config();
+
+
+
 const express = require("express");
+const mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 //Database
 const database = require("./database");
@@ -9,7 +14,14 @@ const booky = express();
 booky.use(bodyParser.urlencoded({extended: true}));
 booky.use(bodyParser.json());
 
-
+mongoose.connect(process.env.MONGO_URL,
+{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true
+}
+).then(() => console.log("connection established"));
 /*
 Route               ROOT(/)
 Description        Get all the books
